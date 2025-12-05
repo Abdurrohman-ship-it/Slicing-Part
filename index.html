@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabana Fried Chicken - Pilihan Keluarga Indonesia</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sabanaRed: '#D61F26',
+                        sabanaYellow: '#FFCB05',
+                        sabanaDark: '#1F2937',
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html { scroll-behavior: smooth; }
+        .bg-pattern {
+            background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans flex flex-col min-h-screen">
+
+<nav class="bg-sabanaRed text-white sticky top-0 z-50 shadow-lg">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <a href="index.html" class="flex items-center gap-2">
+            <div class="bg-white text-sabanaRed font-bold rounded px-2 py-1 text-xl italic">Sabana
+            </div>
+            <span class="font-bold text-lg hidden sm:block">Fried Chicken</span>
+        </a>
+        <div class="hidden md:flex space-x-8 font-medium items-center">
+            <a href="index.html" class="text-sabanaYellow font-bold border-b-2 border-sabanaYellow transition">Home</a>
+            <a href="profile.html" class="hover:text-sabanaYellow transition">Profil</a>
+            <a href="menu.html" class="hover:text-sabanaYellow transition">Menu</a>
+            <a href="kontak.html" class="bg-white text-sabanaRed px-4 py-2 rounded-full hover:bg-sabanaYellow hover:text-sabanaRed transition shadow font-bold">Hubungi Kami</a>
+        </div>
+        <button class="md:hidden text-2xl" onclick="toggleMobileMenu()">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-red-700 p-4 space-y-3">
+        <a href="index.html" class="block w-full text-left font-bold text-sabanaYellow">Home</a>
+        <a href="profile.html" class="block w-full text-left hover:text-sabanaYellow">Profil</a>
+        <a href="menu.html" class="block w-full text-left hover:text-sabanaYellow">Menu</a>
+        <a href="kontak.html" class="block w-full text-left hover:text-sabanaYellow">Hubungi Kami</a>
+    </div>
+</nav>
+    
+<main class="flex-grow">
+
+    <section id="home">
+        <div class="bg-sabanaRed text-white relative overflow-hidden">
+            <div class="container mx-auto px-4 py-16 md:py-24 flex flex-col-reverse md:flex-row items-center relative z-10">
+                <div class="md:w-1/2 z-10 text-center md:text-left">
+                    <span class="bg-sabanaYellow text-sabanaRed px-3 py-1 rounded-full text-sm font-bold uppercase mb-4 inline-block shadow">Sejak 2006</span>
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">Nikmatnya Kebersamaan Keluarga</h1>
+                    <p class="text-lg md:text-xl mb-8 text-red-100">Hadir untuk memenuhi kebutuhan masyarakat Indonesia dengan produk Fried Chicken yang Halal, Nikmat, dan Bergizi.</p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                        <a href="menu.html" class="bg-sabanaYellow text-sabanaRed font-bold px-8 py-3 rounded-full shadow-lg hover:bg-yellow-400 transition transform hover:-translate-y-1">Lihat Menu</a>
+                        <a href="kontak.html" class="border-2 border-white text-white font-bold px-8 py-3 rounded-full hover:bg-white hover:text-sabanaRed transition">Gabung Mitra</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 mb-8 md:mb-0 relative z-10 flex justify-center">
+                    <div class="w-64 h-64 md:w-96 md:h-96 bg-white rounded-full flex items-center justify-center border-8 border-sabanaYellow shadow-2xl">
+                        <img src="img/01_franchise-sabana-fried-chicken.jpg" alt="Sabana Fried Chicken"
+                             class="w-48 h-48 md:w-72 md:h-72 object-cover rounded-full">
+                    </div>
+                </div>
+                <div class="absolute top-0 right-0 w-full h-full opacity-10 pointer-events-none">
+                     <i class="fas fa-drumstick-bite text-9xl absolute top-10 right-10 transform rotate-12"></i>
+                     <i class="fas fa-hamburger text-8xl absolute bottom-10 left-10 transform -rotate-12"></i>
+                </div>
+            </div>
+            <div class="absolute bottom-0 left-0 w-full z-10">
+                <svg class="w-full h-16 text-sabanaYellow" viewBox="0 0 1440 320" preserveAspectRatio="none">
+                    <path fill="currentColor" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+                </svg>
+            </div>
+        </div>
+
+        <div class="bg-sabanaYellow py-16">
+            <div class="container mx-auto px-4">
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <h2 class="text-3xl font-bold text-sabanaRed mb-4">Kenapa Sabana Fried Chicken?</h2>
+                    <p class="text-gray-800">Kualitas dan rasa adalah prioritas kami untuk kepuasan pelanggan.</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="bg-white p-6 rounded-xl shadow-md text-center transform hover:scale-105 transition">
+                        <div class="text-sabanaRed text-4xl mb-4"><i class="fas fa-check-circle"></i></div>
+                        <h3 class="font-bold text-lg">100% Halal</h3>
+                        <p class="text-sm text-gray-600">Bersertifikat MUI</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md text-center transform hover:scale-105 transition">
+                        <div class="text-sabanaRed text-4xl mb-4"><i class="fas fa-leaf"></i></div>
+                        <h3 class="font-bold text-lg">Bahan Alami</h3>
+                        <p class="text-sm text-gray-600">Bumbu rempah asli</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md text-center transform hover:scale-105 transition">
+                        <div class="text-sabanaRed text-4xl mb-4"><i class="fas fa-truck"></i></div>
+                        <h3 class="font-bold text-lg">Ribuan Mitra</h3>
+                        <p class="text-sm text-gray-600">Tersedia di kota Anda</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md text-center transform hover:scale-105 transition">
+                        <div class="text-sabanaRed text-4xl mb-4"><i class="fas fa-money-bill-wave"></i></div>
+                        <h3 class="font-bold text-lg">Harga Rakyat</h3>
+                        <p class="text-sm text-gray-600">Terjangkau semua kalangan</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="bg-sabanaDark text-white pt-16 pb-8">
+    <div class="container mx-auto px-4 text-center">
+         <p>&copy; 2024 Sabana Group. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script>
+    function toggleMobileMenu() {
+        document.getElementById('mobile-menu').classList.toggle('hidden');
+    }
+</script>
+</body>
+</html>

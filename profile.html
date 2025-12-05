@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil - Sabana Fried Chicken</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sabanaRed: '#D61F26',
+                        sabanaYellow: '#FFCB05',
+                        sabanaDark: '#1F2937',
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans flex flex-col min-h-screen">
+
+<nav class="bg-sabanaRed text-white sticky top-0 z-50 shadow-lg">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <a href="index.html" class="flex items-center gap-2">
+            <div class="bg-white text-sabanaRed font-bold rounded px-2 py-1 text-xl italic">Sabana</div>
+            <span class="font-bold text-lg hidden sm:block">Fried Chicken</span>
+        </a>
+        <div class="hidden md:flex space-x-8 font-medium items-center">
+            <a href="index.html" class="hover:text-sabanaYellow transition">Home</a>
+            <a href="profile.html" class="text-sabanaYellow font-bold border-b-2 border-sabanaYellow transition">Profil</a>
+            <a href="menu.html" class="hover:text-sabanaYellow transition">Menu</a>
+            <a href="kontak.html" class="bg-white text-sabanaRed px-4 py-2 rounded-full hover:bg-sabanaYellow hover:text-sabanaRed transition shadow font-bold">Hubungi Kami</a>
+        </div>
+        <button class="md:hidden text-2xl" onclick="toggleMobileMenu()">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-red-700 p-4 space-y-3">
+        <a href="index.html" class="block w-full text-left hover:text-sabanaYellow">Home</a>
+        <a href="profile.html" class="block w-full text-left font-bold text-sabanaYellow">Profil</a>
+        <a href="menu.html" class="block w-full text-left hover:text-sabanaYellow">Menu</a>
+        <a href="kontak.html" class="block w-full text-left hover:text-sabanaYellow">Hubungi Kami</a>
+    </div>
+</nav>
+    
+<main class="flex-grow bg-gray-50">
+    <div class="bg-white shadow-sm py-12">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-3xl md:text-4xl font-bold text-sabanaRed">Tentang Kami</h1>
+            <div class="w-20 h-1 bg-sabanaYellow mx-auto mt-4 rounded"></div>
+        </div>
+    </div>
+
+<div class="container px-4 py-16 mx-auto">
+    <div class="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row">
+        
+        <!-- BAGIAN TEKS (DITEGAHKAN) -->
+        <div class="md:w-7/12 m-auto p-8 md:p-12 flex justify-center flex-col text-center">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4 uppercase tracking-wide border-l-4 border-sabanaRed pl-4">
+                Sejarah Sabana
+            </h2>
+            <p class="text-gray-600 leading-relaxed mb-4">
+                Berawal dari kekhawatiran akan produk ayam yang beredar dipasaran, yaitu produk ayam
+                yang belum jelas secara penyembelihan dan kualitasnya. Maka pada 
+                <strong>8 Agustus 2006</strong>, H. Syamsalis membuka booth atau gerobak pertama 
+                Sabana Fried Chicken di Komplek Duta Indah, Bekasi.
+            </p>
+            <p class="text-gray-600 leading-relaxed">
+                Kini, Sabana telah memiliki ribuan mitra yang tersebar di Pulau Sumatera dan Jawa,
+                menjadi pilihan keluarga Indonesia yang mengutamakan kehalalan dan kualitas rasa.
+            </p>
+        </div>
+
+    </div>
+</div>
+
+
+        <div class="mt-16 bg-sabanaRed rounded-2xl p-8 md:p-12 text-white text-center shadow-lg relative overflow-hidden">
+            <div class="relative z-10">
+                <h2 class="text-3xl font-bold mb-6">Komitmen Halal Kami</h2>
+                <p class="max-w-2xl mx-auto text-lg mb-8">Kami hanya bekerja sama dengan Rumah Pemotongan Ayam yang telah bersertifikat halal dan memiliki bisnis yang terintegrasi mulai dari peternakan hingga pengolahan.</p>
+                <div class="inline-block bg-white text-sabanaRed p-4 rounded-lg shadow-lg">
+                    <i class="fas fa-check-circle text-4xl mb-2"></i>
+                    <img src="img/files (1).jpeg" alt="Sertifikat Halal" class="w-24 mx-auto">
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</main>
+
+<footer class="bg-sabanaDark text-white pt-16 pb-8">
+    <div class="container mx-auto px-4 text-center">
+         <p>&copy; 2024 Sabana Group. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script>
+    function toggleMobileMenu() {
+        document.getElementById('mobile-menu').classList.toggle('hidden');
+    }
+</script>
+</body>
+</html>

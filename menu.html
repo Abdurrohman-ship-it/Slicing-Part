@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Sabana Fried Chicken</title>
+
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sabanaRed: '#D61F26',
+                        sabanaYellow: '#FFCB05',
+                        sabanaDark: '#1F2937',
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .bg-pattern {
+            background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 font-sans flex flex-col min-h-screen">
+
+<!-- NAVBAR -->
+<nav class="bg-sabanaRed text-white sticky top-0 z-50 shadow-lg">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <a href="index.html" class="flex items-center gap-2">
+            <div class="bg-white text-sabanaRed font-bold rounded px-2 py-1 text-xl italic">Sabana</div>
+            <span class="font-bold text-lg hidden sm:block">Fried Chicken</span>
+        </a>
+
+        <div class="hidden md:flex space-x-8 font-medium items-center">
+            <a href="index.html" class="hover:text-sabanaYellow transition">Home</a>
+            <a href="profile.html" class="hover:text-sabanaYellow transition">Profil</a>
+            <a href="menu.html" class="text-sabanaYellow font-bold border-b-2 border-sabanaYellow transition">Menu</a>
+            <a href="kontak.html" class="bg-white text-sabanaRed px-4 py-2 rounded-full hover:bg-sabanaYellow hover:text-sabanaRed transition shadow font-bold">
+                Hubungi Kami
+            </a>
+        </div>
+
+        <button class="md:hidden text-2xl" onclick="toggleMobileMenu()">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-red-700 p-4 space-y-3">
+        <a href="index.html" class="block hover:text-sabanaYellow">Home</a>
+        <a href="profile.html" class="block hover:text-sabanaYellow">Profil</a>
+        <a href="menu.html" class="block font-bold text-sabanaYellow">Menu</a>
+        <a href="kontak.html" class="block hover:text-sabanaYellow">Hubungi Kami</a>
+    </div>
+</nav>
+
+<!-- MAIN CONTENT -->
+<main class="flex-grow bg-pattern">
+
+    <!-- HEADER -->
+    <div class="bg-sabanaYellow py-12">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-3xl md:text-4xl font-bold text-sabanaRed">Menu Favorit</h1>
+            <p class="text-red-800 mt-2 font-medium">Renyah, Gurih, dan Pasti Halal</p>
+        </div>
+    </div>
+
+    <!-- MENU GRID -->
+    <div class="container mx-auto px-4 py-16">
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+
+            <!-- MENU ITEM 1 -->
+            <a href="kontak.html" class="block bg-white rounded-2xl shadow-lg hover:shadow-xl transition overflow-hidden group">
+                <div class="h-56 bg-gray-100 flex items-center justify-center relative overflow-hidden">
+                    <img src="img/Dada Ayam Sabana.jpeg"
+                         class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
+                    <div class="absolute top-3 right-3 bg-sabanaRed text-white text-xs font-bold px-2 py-1 rounded">Best Seller</div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold">Ayam Dada Original</h3>
+                    <p class="text-gray-500 text-sm mb-4">Potongan dada ayam besar dengan bumbu meresap.</p>
+                    <span class="text-sabanaRed font-bold text-lg">Rp 12.000</span>
+                </div>
+            </a>
+
+            <!-- MENU ITEM 2 -->
+            <a href="kontak.html" class="block bg-white rounded-2xl shadow-lg hover:shadow-xl transition overflow-hidden group">
+                <div class="h-56 bg-gray-100 flex items-center justify-center overflow-hidden">
+                    <img src="img/1609661339138-ayam-goreng-pedas-thumb.jpg"
+                         class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold">Ayam Paha Atas Pedas</h3>
+                    <p class="text-gray-500 text-sm mb-4">Sensasi pedas yang nendang dengan kulit renyah.</p>
+                    <span class="text-sabanaRed font-bold text-lg">Rp 12.000</span>
+                </div>
+            </a>
+
+            <!-- MENU ITEM 3 -->
+            <a href="kontak.html" class="block bg-white rounded-2xl shadow-lg hover:shadow-xl transition overflow-hidden group">
+                <div class="h-56 bg-gray-100 overflow-hidden flex items-center justify-center">
+                    <img src="img/Pops-Burger-website-1.jpg"
+                         class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold">Sabana Burger</h3>
+                    <p class="text-gray-500 text-sm mb-4">Roti lembut dengan patty ayam krispi dan saus spesial.</p>
+                    <span class="text-sabanaRed font-bold text-lg">Rp 15.000</span>
+                </div>
+            </a>
+
+            <!-- MENU ITEM 4 -->
+            <a href="kontak.html" class="block bg-white rounded-2xl shadow-lg hover:shadow-xl transition overflow-hidden group">
+                <div class="h-56 bg-gray-100 flex items-center justify-center overflow-hidden">
+                    <img src="img/tips-membuat-kentang-goreng-anti-lembek-dan-tetap-kriuk-resep-kentang-goreng-mcd-kentang-goreng-kfc-9cde86371d7fc78c91ae80a6ffab250e-2c28a950c10d937a546160e888ed397c (1).avif"
+                         class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold">Kentang Goreng</h3>
+                    <p class="text-gray-500 text-sm mb-4">Kentang renyah, gurih, cocok untuk ngemil.</p>
+                    <span class="text-sabanaRed font-bold text-lg">Rp 10.000</span>
+                </div>
+            </a>
+
+        </div>
+    </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-sabanaDark text-white pt-16 pb-8">
+    <div class="container mx-auto text-center">
+         <p>&copy; 2024 Sabana Group. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script>
+    function toggleMobileMenu() {
+        document.getElementById('mobile-menu').classList.toggle('hidden');
+    }
+</script>
+
+</body>
+</html>
+
