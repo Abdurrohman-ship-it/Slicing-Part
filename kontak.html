@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
+
     <script>
         tailwind.config = {
             theme: {
@@ -24,108 +25,146 @@
         }
     </script>
 </head>
+
 <body class="bg-gray-50 text-gray-800 font-sans flex flex-col min-h-screen">
-    
+
+<!-- NAVBAR -->
 <nav class="bg-sabanaRed text-white sticky top-0 z-50 shadow-lg">
     <div class="container mx-auto px-4 py-4 flex justify-between items-center">
         <a href="index.html" class="flex items-center gap-2">
             <div class="bg-white text-sabanaRed font-bold rounded px-2 py-1 text-xl italic">Sabana</div>
             <span class="font-bold text-lg hidden sm:block">Fried Chicken</span>
         </a>
+
         <div class="hidden md:flex space-x-8 font-medium items-center">
             <a href="index.html" class="hover:text-sabanaYellow transition">Home</a>
             <a href="profile.html" class="hover:text-sabanaYellow transition">Profil</a>
             <a href="menu.html" class="hover:text-sabanaYellow transition">Menu</a>
             <a href="kontak.html" class="text-sabanaYellow font-bold border-b-2 border-sabanaYellow px-4 py-2 transition">Hubungi Kami</a>
         </div>
+
         <button class="md:hidden text-2xl" onclick="toggleMobileMenu()">
             <i class="fas fa-bars"></i>
         </button>
     </div>
+
     <div id="mobile-menu" class="hidden md:hidden bg-red-700 p-4 space-y-3">
-        <a href="index.html" class="block w-full text-left hover:text-sabanaYellow">Home</a>
-        <a href="profile.html" class="block w-full text-left hover:text-sabanaYellow">Profil</a>
-        <a href="menu.html" class="block w-full text-left hover:text-sabanaYellow">Menu</a>
-        <a href="kontak.html" class="block w-full text-left font-bold text-sabanaYellow">Hubungi Kami</a>
+        <a href="index.html" class="block hover:text-sabanaYellow">Home</a>
+        <a href="profile.html" class="block hover:text-sabanaYellow">Profil</a>
+        <a href="menu.html" class="block hover:text-sabanaYellow">Menu</a>
+        <a href="kontak.html" class="block font-bold text-sabanaYellow">Hubungi Kami</a>
     </div>
 </nav>
 
+<!-- HEADER -->
 <main class="flex-grow bg-gray-50">
     <div class="bg-sabanaRed text-white py-16 text-center">
         <h1 class="text-3xl md:text-4xl font-bold mb-4">Hubungi Kami</h1>
-        <p class="text-red-100 max-w-xl mx-auto px-4">Info Kemitraan Sabana Fried Chicken. Mari tumbuh bersama kami.</p>
-        <a href="https://wa.me/6282191842745" target="_blank" class="mt-6 inline-flex items-center bg-white text-sabanaRed px-6 py-2 rounded-full font-bold shadow-lg hover:bg-yellow-100 transition">
+        <p class="text-red-100 max-w-xl mx-auto px-4">
+            Info Kemitraan Sabana Fried Chicken. Mari tumbuh bersama kami.
+        </p>
+
+        <a href="https://wa.me/6282191842745" target="_blank"
+           class="mt-6 inline-flex items-center bg-white text-sabanaRed px-6 py-2 rounded-full font-bold shadow-lg hover:bg-yellow-100 transition">
             <i class="fab fa-whatsapp text-2xl mr-2 text-green-500"></i> 0821-9184-2745
         </a>
     </div>
 
+    <!-- FORM + MAP SECTION -->
     <div class="container mx-auto px-4 -mt-10 mb-20">
         <div class="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row">
+
+            <!-- FORM -->
             <div class="md:w-1/2 p-8 md:p-12">
                 <h3 class="text-2xl font-bold text-gray-800 mb-6">Kirim Pesan</h3>
+
                 <form onsubmit="event.preventDefault(); alert('Pesan terkirim (Simulasi)');">
                     <div class="mb-4">
                         <label class="block text-gray-600 text-sm font-bold mb-2">Nama Lengkap</label>
-                        <input type="text" class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-sabanaRed focus:outline-none transition" placeholder="Masukkan nama anda">
+                        <input type="text"
+                               class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-sabanaRed focus:outline-none transition"
+                               placeholder="Masukkan nama anda">
                     </div>
+
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                         <div>
                             <label class="block text-gray-600 text-sm font-bold mb-2">No. WhatsApp</label>
-                            <input type="tel" class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-sabanaRed focus:outline-none transition" placeholder="08xx-xxxx-xxxx">
+                            <input type="tel"
+                                   class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-sabanaRed focus:outline-none transition"
+                                   placeholder="08xx-xxxx-xxxx">
                         </div>
+
                         <div>
                             <label class="block text-gray-600 text-sm font-bold mb-2">Kategori</label>
-                            <select class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-sabanaRed focus:outline-none transition">
+                            <select
+                                class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-sabanaRed focus:outline-none transition">
                                 <option>Kemitraan</option>
                                 <option>Saran & Kritik</option>
                                 <option>Lainnya</option>
                             </select>
                         </div>
                     </div>
+
                     <div class="mb-6">
                         <label class="block text-gray-600 text-sm font-bold mb-2">Pesan</label>
-                        <textarea class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-sabanaRed focus:outline-none transition h-32" placeholder="Tulis pesan anda disini..."></textarea>
+                        <textarea
+                            class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-sabanaRed focus:outline-none transition h-32"
+                            placeholder="Tulis pesan anda disini..."></textarea>
                     </div>
-                    <button class="w-full bg-sabanaRed text-white font-bold py-3 rounded-lg hover:bg-red-700 transition shadow-lg transform hover:-translate-y-1">Kirim Pesan</button>
+
+                    <button
+                        class="w-full bg-sabanaRed text-white font-bold py-3 rounded-lg hover:bg-red-700 transition shadow-lg transform hover:-translate-y-1">
+                        Kirim Pesan
+                    </button>
                 </form>
             </div>
 
-            <div class="md:w-1/2 bg-gray-800 text-white p-8 md:p-12 flex flex-col justify-between">
-                <div>
-                    <h3 class="text-xl font-bold mb-6 border-b border-gray-600 pb-4">Kantor Pusat</h3>
-                    <div class="space-y-4">
-                        <div class="flex items-start">
-                            <i class="fas fa-map-marker-alt mt-1 mr-4 text-sabanaYellow"></i>
-                            <p class="text-gray-300 text-sm">Sabana Group<br>Jl. Jatimakmur No.36 Kel. Jatimakmur,<br>Kec. Pondok Gede, Kota Bekasi</p>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-envelope mr-4 text-sabanaYellow"></i>
-                            <p class="text-gray-300 text-sm">info@sabana.co.id</p>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-clock mr-4 text-sabanaYellow"></i>
-                            <p class="text-gray-300 text-sm">Senin - Jumat (09.00 - 17.00)</p>
-                        </div>
+            <!-- MAP -->
+            <div class="md:w-1/2 bg-gray-800 text-white p-8 md:p-12">
+
+                <h3 class="text-xl font-bold mb-6 border-b border-gray-600 pb-4">Kantor Pusat</h3>
+
+                <div class="space-y-4 mb-6">
+                    <div class="flex items-start">
+                        <i class="fas fa-map-marker-alt mt-1 mr-4 text-sabanaYellow"></i>
+                        <p class="text-gray-300 text-sm">
+                            Sabana Group<br>
+                            Jl. Jatimakmur No.36 Kel. Jatimakmur,<br>
+                            Kec. Pondok Gede, Kota Bekasi
+                        </p>
+                    </div>
+
+                    <div class="flex items-center">
+                        <i class="fas fa-envelope mr-4 text-sabanaYellow"></i>
+                        <p class="text-gray-300 text-sm">info@sabana.co.id</p>
+                    </div>
+
+                    <div class="flex items-center">
+                        <i class="fas fa-clock mr-4 text-sabanaYellow"></i>
+                        <p class="text-gray-300 text-sm">Senin - Jumat (09.00 - 17.00)</p>
                     </div>
                 </div>
-                <br>
-              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15863.20590328643!2d106.9248532761658!3d-6.289804377505039!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698d77a758cbd9%3A0xc5104b365225d356!2sSabana%20Group!5e0!3m2!1sen!2sid!4v1764915356224!5m2!1sen!2sid" width="650" height="400" style="border:0;" allowfullscreen="1" loading="lazy" referrerpolicy="no-referrer-when-downgrade md:w-7/12 m-auto p-8 md:p-12 flex justify-center flex-col"></iframe>
-                    
 
-     
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15863.20590328643!2d106.9248532761658!3d-6.289804377505039!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698d77a758cbd9%3A0xc5104b365225d356!2sSabana%20Group!5e0!3m2!1sen!2sid!4v1764915356224!5m2!1sen!2sid"
+                    class="w-full rounded-lg"
+                    height="400"
+                    style="border:0;"
+                    allowfullscreen
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
 
-                    <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
-                        <span class="text-white font-bold">Lihat di Google Maps</span>
-                    </div>
-                </a>
             </div>
+
         </div>
     </div>
 </main>
 
+<!-- FOOTER -->
 <footer class="bg-sabanaDark text-white pt-16 pb-8">
     <div class="container mx-auto px-4 text-center">
-         <p>&copy; 2024 Sabana Group. All Rights Reserved.</p>
+        <p>&copy; 2024 Sabana Group. All Rights Reserved.</p>
     </div>
 </footer>
 
@@ -134,5 +173,6 @@
         document.getElementById('mobile-menu').classList.toggle('hidden');
     }
 </script>
+
 </body>
 </html>
